@@ -1,2 +1,95 @@
-*.class
-*.log
+logs
+project/project
+project/target
+modules/**/project
+target
+tmp
+*.tmp
+.history
+dist
+.idea
+*.iml
+*.eml
+/out
+.idea_modules
+.classpath
+.project
+.worksheet
+*.sc
+RUNNING_PID
+.settings
+.cache
+.target
+**/bin
+**/.gitignore
+**/*~
+.cache-main
+.cache-tests
+.DS_store
+
+# Generated sources from xsd files
+**/sbt-scalaxb
+
+# Overrides files containing secrets
+**/overrides.conf
+
+# SSL credentials
+**/security/*.der
+**/security/*.pem
+
+# Scoverage report, which is copied out of target directory for preservation across 'clean'
+**/scoverage-report
+
+# Application configuration for Oracle DB - should be copied locally from application.conf.template
+/modules/statsdb/src/main/resources/application.conf
+
+# Entitlement data
+/entitlements.json
+/modules/entitlement*/entitlement.json*
+
+# Elasticsearch local database from unit testing (delete directory to clean out old state)
+/modules/*/data
+
+# Top-level directory for storing test datasets
+/data
+
+# Top level directory for testing blueprint datasets
+/blueprint
+
+# Local fork of elastic4s for bug fixing feature development
+/modules/elastic4s
+
+# ITG data files for StoreOnce processing - prevent accidentally adding them
+**/itg-files
+
+# Fake HDFS directory for local Spark jobs
+/fake-hdfs
+modules/storeonce-spark/fake-hdfs/
+**/test-output
+
+# Log Files
+#**/*.log
+
+# Zookeeper/Kafka outputs
+**/zookeeper.out
+
+# Real insight-auth application.conf file
+modules/insight-auth/src/main/resources/application.conf
+
+# Strongpass CA and CA Cert
+modules/strongpass/certs/strongpassCA/
+modules/strongpass/certs/signed/
+modules/strongpass/certs/cacert.pem
+modules/strongpass/certs/cakey.pem
+
+# Files created by akka tests
+journal/
+
+.metadata/*
+
+modules/.metadata/*
+
+# executor-conf files for test-runs of jenkins/ spark scripts
+*.executor-conf
+
+**/*.jar

@@ -61,8 +61,4 @@ object Main {
         0
     }
 
-  def changeCount() = {
-
-  }
-
 }
